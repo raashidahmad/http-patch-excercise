@@ -33,7 +33,19 @@ namespace HttpPatchExcercise.Controllers
 
         private Book GetBook()
         {
-            return new Book() { Id = 1, Title = "Databases", Description = "Description of the Book", Author = "Some Author" };
+            List<Chapter> chapters = new List<Chapter>()
+            {
+                new Chapter() { ChapterId = 1, ChapterName = "Chapter One" },
+                new Chapter() { ChapterId = 2, ChapterName = "Chapter Two" }
+            };
+            return new Book()
+            {
+                Id = 1,
+                Title = "Databases",
+                Description = "Description of the Book",
+                Author = "Some Author",
+                Chapters = chapters,
+            };
         }
     }
 }
