@@ -24,4 +24,10 @@ namespace HttpPatchExcercise.Models
         public int ChapterId { get; set; }
         public string ChapterName { get; set; } = "-";
     }
+
+    public class CustomConfig
+    {
+        public string BookKey { get; set; } = "";
+        public string BookTitle { get; set; } = "";
+    }
 }

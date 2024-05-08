@@ -1,4 +1,6 @@
 
+using HttpPatchExcercise.Models;
+
 namespace HttpPatchExcercise
 {
     public class Program
@@ -13,6 +15,7 @@ namespace HttpPatchExcercise
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.Configure<CustomConfig>(builder.Configuration.GetSection("CustomConfig"));
 
             var app = builder.Build();
 
